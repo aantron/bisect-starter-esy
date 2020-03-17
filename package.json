@@ -2,7 +2,7 @@
   "name": "bisect-example-esy",
   "dependencies": {
     "ocaml": "*",
-    "@opam/bisect_ppx": "aantron/bisect_ppx:bisect_ppx.opam",
+    "@opam/bisect_ppx": "^2.0.0",
     "@opam/dune": "*"
   }
 }
