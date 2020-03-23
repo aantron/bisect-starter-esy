@@ -4,8 +4,7 @@
 git clone https://github.com/aantron/bisect-starter-esy.git
 cd bisect-starter-esy
 esy install
-BISECT_ENABLE=yes esy dune build ./tester.exe
-esy dune exec ./tester.exe
+BISECT_ENABLE=yes esy dune exec ./tester.exe
 esy dune exec bisect-ppx-report -- html
 ```
 

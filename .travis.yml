@@ -5,8 +5,7 @@ before_script:
   - esy install
 
 script:
-  - BISECT_ENABLE=yes esy dune build ./tester.exe
-  - esy dune exec ./tester.exe
+  - BISECT_ENABLE=yes esy dune exec ./tester.exe
   - esy dune exec bisect-ppx-report -- html
   - cat _coverage/index.html
   - esy dune exec bisect-ppx-report -- summary
