@@ -2,7 +2,9 @@
   "name": "bisect-example-esy",
   "dependencies": {
     "ocaml": "*",
-    "@opam/bisect_ppx": "^2.0.0",
-    "@opam/dune": "*"
+    "@opam/dune": "^2.7.0"
+  },
+  "devDependencies": {
+    "@opam/bisect_ppx": "^2.5.0"
   }
 }

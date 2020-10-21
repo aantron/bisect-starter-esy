@@ -1,16 +1,12 @@
 language: generic
+dist: bionic
 
 before_script:
   - npm install -g esy
   - esy install
 
 script:
-  - BISECT_ENABLE=yes esy dune exec ./tester.exe
-  - esy dune exec bisect-ppx-report -- html
+  - esy dune runtest --instrument-with bisect_ppx --force
+  - esy bisect-ppx-report html
   - cat _coverage/index.html
-  - esy dune exec bisect-ppx-report -- summary
-
-notifications:
-  email:
-    on_success: always
-    on_failure: always
+  - esy bisect-ppx-report summary

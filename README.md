@@ -4,8 +4,9 @@
 git clone https://github.com/aantron/bisect-starter-esy.git
 cd bisect-starter-esy
 esy install
-BISECT_ENABLE=yes esy dune exec ./tester.exe
-esy dune exec bisect-ppx-report -- html
+
+esy dune runtest --instrument-with bisect_ppx --force
+esy bisect-ppx-report html
 ```
 
 These commands generate
